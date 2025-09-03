@@ -9,7 +9,7 @@
   
   - name: installing  PyMySQL and cryptography 
     ansible.builtin.package:
-      name: {{ item }}
+      name: "{{ item }}"
       state: present 
     loop:
     -  PyMySQL
