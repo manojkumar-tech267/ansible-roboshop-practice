@@ -7,6 +7,14 @@
       name: maven 
       state: installed 
   
+  - name: installing  PyMySQL and cryptography 
+    ansible.builtin.package:
+      name: {{ item }}
+      state: present 
+    loop:
+    -  PyMySQL
+    - cryptography
+  
   - name: creating app directory
     ansible.builtin.file:
       path: /app 
