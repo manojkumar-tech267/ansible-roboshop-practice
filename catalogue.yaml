@@ -66,4 +66,4 @@
       state: installed 
   
   - name: loading master data 
-    ansible.builtin.command: mongosh --host mongodb.cloudwithmanoj.online </app/db/master-data.js
+    ansible.builtin.shell: mongosh --host mongodb.cloudwithmanoj.online </app/db/master-data.js
