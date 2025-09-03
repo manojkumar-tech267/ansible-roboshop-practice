@@ -35,6 +35,11 @@
     args:
       chdir: /app 
   
+  - name: copy dispatch.service file 
+    ansible.builtin.copy:
+    src: dispatch.service 
+    dest: /etc/systemd/system/dispatch.service
+    
   - name: reload dispatch 
     ansible.builtin.systemd_service:
       daemon_reload: true
